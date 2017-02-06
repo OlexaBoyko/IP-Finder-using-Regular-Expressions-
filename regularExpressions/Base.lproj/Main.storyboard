@@ -22,9 +22,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="asdzkf;salkdfn;lkn192.168.0.1sda;flksad255.255.255.0ewlksdf;klasndf;lk" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MuT-Rt-SyM">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MuT-Rt-SyM">
                                 <rect key="frame" x="16" y="28" width="343" height="288"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <string key="text">asdzkf;salkdfn;lkn192.168.0.1sda;flksad255.255.255.0ewlksdf;klasndf;lk267.58.21.4asldfna;sdlfkns;252.18.229.1asdlkf;masdlkfm84.488.49.11</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

@@ -17,7 +17,7 @@
 
 @implementation ViewController
 
-
+bool alertWillPresent = false;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,7 +38,7 @@
     [self.view endEditing:YES];
 }
 - (IBAction)findIPsButtonPressed:(id)sender {
-    
+    alertWillPresent = YES;
     _outputField.text = @"";
     
     NSArray *array = [IPFinder findIPs:_inputField.text];
@@ -48,14 +48,18 @@
         _outputField.text = [_outputField.text stringByAppendingString:@"\n"];
     }
     
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Регулярні вирази" message:@"Виконав студент групи ПМІ-42 Бойко Олекса" preferredStyle:UIAlertControllerStyleAlert];
-//        
-//        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-//        [alertController addAction:ok];
-//        
-//        [self presentViewController:alertController animated:YES completion:nil];
-//    });
+    if (!alertWillPresent) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Регулярні вирази" message:@"Виконав студент групи ПМІ-42 Бойко Олекса" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:ok];
+            
+            [self presentViewController:alertController animated:YES completion:^void {
+                alertWillPresent = NO;
+            }];
+        });
+    }
 }
 
 
