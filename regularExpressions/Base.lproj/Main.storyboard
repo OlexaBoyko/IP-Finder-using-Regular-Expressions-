@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="asdzkf;salkdfn;lkn192.168.0.1sda;flksad255.255.255.0ewlksdf;klasndf;lk" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MuT-Rt-SyM">
+                                <rect key="frame" x="16" y="28" width="343" height="288"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37Z-Xc-pg3">
+                                <rect key="frame" x="16" y="324" width="343" height="253"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="253" id="fd1-rf-knq"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynv-ZZ-4JJ">
+                                <rect key="frame" x="160" y="607" width="54" height="30"/>
+                                <state key="normal" title="Find IPs"/>
+                                <connections>
+                                    <action selector="findIPsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ssK-ji-7eY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ynv-ZZ-4JJ" secondAttribute="trailing" constant="145" id="4QV-kr-1dG"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="37Z-Xc-pg3" secondAttribute="leading" id="HeN-uh-8Pz"/>
+                            <constraint firstItem="MuT-Rt-SyM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="QRN-Qs-Z1o"/>
+                            <constraint firstItem="ynv-ZZ-4JJ" firstAttribute="top" secondItem="37Z-Xc-pg3" secondAttribute="bottom" constant="30" id="Rqo-i3-lL5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ynv-ZZ-4JJ" secondAttribute="bottom" constant="30" id="SDu-Mf-6Gd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MuT-Rt-SyM" secondAttribute="trailing" id="nOt-Az-XDx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="37Z-Xc-pg3" secondAttribute="trailing" id="o1V-OQ-n55"/>
+                            <constraint firstItem="ynv-ZZ-4JJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="144" id="qPg-7L-WHE"/>
+                            <constraint firstItem="37Z-Xc-pg3" firstAttribute="top" secondItem="MuT-Rt-SyM" secondAttribute="bottom" constant="8" id="tcD-cT-3hy"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="MuT-Rt-SyM" secondAttribute="leading" id="xLu-xY-3hD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="findButton" destination="ynv-ZZ-4JJ" id="D6Z-kT-taq"/>
+                        <outlet property="inputField" destination="MuT-Rt-SyM" id="J0V-0W-aEZ"/>
+                        <outlet property="outputField" destination="37Z-Xc-pg3" id="3AW-L2-Iko"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
